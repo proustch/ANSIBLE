@@ -1,0 +1,21 @@
+- name: My Playbook
+  hosts: all
+  tasks:
+    - name: Ensure Apache is installed
+      apt:
+        name: apache2
+        state: present
+      become: yes
+
+    - name: Start Apache service
+      service:
+        name: apache2
+        state: started
+        enabled: yes
+      become: yes
+
+    - name: Create a simple HTML page
+      copy:
+        dest: /var/www/html/index.html
+        content: "<html><body><h1>Hello, World!</h1></body></html>"
+      become: yes
