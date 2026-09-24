@@ -4,46 +4,48 @@
   gather_facts: true
 
   tasks:
-    - name: "TASK1 : PRINT DEBUG MAGIC VARIABLES FOR IOS"
-      ansible.builtin.debug:
-        msg: "The hostname is {{ inventory_hostname }} and the group name is {{ group_names }} and the OS is {{ ansible_network_os }}"
-    - name: "TASK2 : SENDING SHOW COMMAND TO DEVICE"
-      cisco.ios.ios_command:
-        commands: show version
-    - name: "TASK3 : SENDING MULTIPLESHOW COMMAND TO DEVICE"
-      cisco.ios.ios_command:
-        commands:
-          - show version
-          - show ip int brief
-          - dir
-
-    - name: "TASK4 - RUN AND PARSE COMMAND WITH NTC TEMPLATE"
-      ansible.utils.cli_parse:
-        command: "show ip interface brief"
-        parser:
-          name: "ansible.netcommon.ntc_templates"
-        set_fact: "interfaces_ntc"
-    - name: "TASK5 - PRINT DEBUG NTC PARSED OUTPUT"
-      ansible.builtin.debug:
-        msg: "{{ ansible_facts['interfaces_ntc'] }}"
-    - name: "TASK6 - PRINT DEBUG NTC PARSED OUTPUT FOR FIRST INTERFACE"
-      ansible.builtin.debug:
-        msg: "{{ ansible_facts['interfaces_ntc'][0] }}"
-    - name: "TASK7 PRINT OUTPUT REGISTERED FROM SHOW COMMAND"
-      cisco.ios.ios_command:
-        commands:
-          - show ip interface brief
-          - show version
-      register: show_command_output
-    - name: "TASK8 PRINT OUTPUT REGISTERED FROM SHOW COMMAND"
-      ansible.builtin.debug:
-        msg: "{{ show_command_output }}"
-    - name: "TASK9 CREATE OUTPUT DIR IF IT DOES NOT EXIST"
-      ansible.builtin.file:
-        path: "show_outputs"
-        state: directory
-        mode: "0755"
-      run_once: true
+#    - name: "TASK1 : PRINT DEBUG MAGIC VARIABLES FOR IOS"
+#      ansible.builtin.debug:
+#        msg: >-
+#          The hostname is {{ inventory_hostname }} and the group name is {{ group_names }}
+#          and the OS is {{ ansible_network_os }}
+#    - name: "TASK2 : SENDING SHOW COMMAND TO DEVICE"
+#      cisco.ios.ios_command:
+#        commands: show version
+#    - name: "TASK3 : SENDING MULTIPLESHOW COMMAND TO DEVICE"
+#      cisco.ios.ios_command:
+#        commands:
+#          - show version
+#          - show ip int brief
+#          - dir
+#
+#    - name: "TASK4 - RUN AND PARSE COMMAND WITH NTC TEMPLATE"
+#      ansible.utils.cli_parse:
+#        command: "show ip interface brief"
+#        parser:
+#          name: "ansible.netcommon.ntc_templates"
+#        set_fact: "interfaces_ntc"
+#    - name: "TASK5 - PRINT DEBUG NTC PARSED OUTPUT"
+#      ansible.builtin.debug:
+#        msg: "{{ ansible_facts['interfaces_ntc'] }}"
+#    - name: "TASK6 - PRINT DEBUG NTC PARSED OUTPUT FOR FIRST INTERFACE"
+#      ansible.builtin.debug:
+#        msg: "{{ ansible_facts['interfaces_ntc'][0] }}"
+#    - name: "TASK7 PRINT OUTPUT REGISTERED FROM SHOW COMMAND"
+#      cisco.ios.ios_command:
+#        commands:
+#          - show ip interface brief
+#          - show version
+#      register: show_command_output
+#    - name: "TASK8 PRINT OUTPUT REGISTERED FROM SHOW COMMAND"
+#     ansible.builtin.debug:
+#        msg: "{{ show_command_output }}"
+#    - name: "TASK9 CREATE OUTPUT DIR IF IT DOES NOT EXIST"
+#      ansible.builtin.file:
+#        path: "show_outputs"
+#        state: directory
+#        mode: "0755"
+#      run_once: true
     - name: "TASK11 EXTRACT VLANS FROM SHOW COMMAND OUTPUT"
       cisco.ios.ios_vlans:
         state: gathered
@@ -56,9 +58,4 @@
       ansible.builtin.template:
         src: "templates/show_command.j2"
         dest: "show_outputs/{{ inventory_hostname }}_show_command.txt"
-        mode: "0644"
-    - name: "TASK13 WRITE J2 TEMPLATE TO FORMAT AND SAVE OUTPUT"
-      ansible.builtin.template:
-        src: "templates/show.j2"
-        dest: "show_outputs/{{ inventory_hostname }}_show.txt"
         mode: "0644"

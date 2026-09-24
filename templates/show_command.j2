@@ -3,5 +3,5 @@ show ip interface brief
 show version
 show vlan brief
 {% for vlan in vlan_output.gathered %}
-show vlan id {{ vlan }}
+show vlan id {{ vlan.vlan_id }}
 {% endfor %}
