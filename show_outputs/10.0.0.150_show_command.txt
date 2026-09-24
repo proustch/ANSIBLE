@@ -1,0 +1,11 @@
+# Show system status for 10.0.0.150
+show ip interface brief
+show version
+show vlan brief
+show vlan id {'name': 'default', 'vlan_id': 1, 'state': 'active', 'shutdown': 'disabled', 'mtu': 1500}
+show vlan id {'name': 'VLAN10', 'vlan_id': 10, 'state': 'active', 'shutdown': 'disabled', 'mtu': 1500}
+show vlan id {'name': 'VLAN20', 'vlan_id': 20, 'state': 'active', 'shutdown': 'disabled', 'mtu': 1500}
+show vlan id {'name': 'fddi-default', 'vlan_id': 1002, 'state': 'active', 'shutdown': 'enabled', 'mtu': 1500}
+show vlan id {'name': 'token-ring-default', 'vlan_id': 1003, 'state': 'active', 'shutdown': 'enabled', 'mtu': 1500}
+show vlan id {'name': 'fddinet-default', 'vlan_id': 1004, 'state': 'active', 'shutdown': 'enabled', 'mtu': 1500}
+show vlan id {'name': 'trnet-default', 'vlan_id': 1005, 'state': 'active', 'shutdown': 'enabled', 'mtu': 1500}

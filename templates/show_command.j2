@@ -1,0 +1,7 @@
+# Show system status for {{ inventory_hostname }}
+show ip interface brief
+show version
+show vlan brief
+{% for vlan in vlan_output.gathered %}
+show vlan id {{ vlan }}
+{% endfor %}
