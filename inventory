@@ -1,0 +1,7 @@
+[eve]
+10.0.0.150  ansible_host=10.0.0.150 ansible_network_os=cisco.ios.ios
+
+[all:vars]
+ansible_user=cproust
+ansible_password=cisco
+ansible_connection=network_cli
