@@ -1,0 +1,8 @@
+vlan 100
+ name LAX-VLAN100
+exit
+interface Vlan100
+ no shutdown
+ description LAX-VLAN100
+ ip address 10.100.1.1 255.255.255.0
+exit

@@ -1,0 +1,8 @@
+vlan {{ vlan.get('number') }}
+ name {{ vlan.get('name') }}
+exit
+interface Vlan{{ vlan.get('number') }}
+ no shutdown
+ description {{ vlan.get('name') }}
+ ip address {{ vlan.get('ip') }} {{ vlan.get('mask') }}
+exit

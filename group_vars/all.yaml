@@ -4,3 +4,8 @@ snmp:
   RW: "private"
   contact: "Network Operations Center"
   location: "Global"
+vlan:
+  number: "101"
+  name: "NYC_VLAN101"
+  ip: "10.200.1.2"
+  mask: "255.255.255.0"

@@ -1,0 +1,249 @@
+Building configuration...
+
+Current configuration : 7872 bytes
+!
+! Last configuration change at 22:20:31 UTC Fri Sep 25 2026 by cproust
+!
+version 17.12
+service timestamps debug datetime msec
+service timestamps log datetime msec
+platform punt-keepalive disable-kernel-core
+!
+hostname SW5
+!
+!
+vrf definition Mgmt-vrf
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+no aaa new-model
+switch 1 provision c9kv-uadp-8p
+!
+!
+!
+!
+!
+!
+!
+!
+login on-success log
+vtp version 1
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint SLA-TrustPoint
+ enrollment pkcs12
+ revocation-check crl
+ hash sha256
+!
+crypto pki trustpoint TP-self-signed-3315745400
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3315745400
+ revocation-check none
+ rsakeypair TP-self-signed-3315745400
+ hash sha256
+!
+!
+crypto pki certificate chain SLA-TrustPoint
+ certificate ca 01
+  30820321 30820209 A0030201 02020101 300D0609 2A864886 F70D0101 0B050030 
+  32310E30 0C060355 040A1305 43697363 6F312030 1E060355 04031317 43697363 
+  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31 33303533 30313934 
+  3834375A 170D3338 30353330 31393438 34375A30 32310E30 0C060355 040A1305 
+  43697363 6F312030 1E060355 04031317 43697363 6F204C69 63656E73 696E6720 
+  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 
+  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6 17222EA1 F1EFF64D 
+  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A 9CAE6388 8A38E520 
+  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE 
+  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7 104FDC5F EA2956AC 
+  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3 C0BD23CF 58BD7188 
+  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F 539BA42B 42C68BB7 
+  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4 5D5D5FB8 8F27D191 
+  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B DF5F4368 95135E44 
+  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F 0101FF04 04030201 
+  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D 0E041604 1449DC85 
+  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648 86F70D01 010B0500 
+  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0 49631C78 240DA905 
+  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB 9093D3B1 6C9E3D8B 
+  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646 5575B146 8DFC66A8 
+  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC 11BA9CD2 55A9232C 
+  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86 C71E3B49 1765308B 
+  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229 C37C1E69 39F08678 
+  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A B623CDBD 230E3AFB 
+  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE 0275156F 719BB2F0 
+  D697DF7F 28
+  	quit
+crypto pki certificate chain TP-self-signed-3315745400
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 0B050030 
+  31312F30 2D060355 04030C26 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33333135 37343534 3030301E 170D3236 30393234 32313231 
+  32385A17 0D333630 39323332 31323132 385A3031 312F302D 06035504 030C2649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 33313537 
+  34353430 30308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 
+  0A028201 01008F02 AB7AEFE2 43C71E02 D67DA8DA 528638CD 0CA3031C 7023F94B 
+  D18E181F 5160B41B E9C89840 B0716986 E91AAD0A 9D7246AE ABCD1C37 A701CA74 
+  0DED7FBF 6D8DCE21 983646AA 29358AB2 DAF6DACE 4259A395 876D326F 6921C091 
+  F606B6D8 31753E60 DC6ED34D 716CBAD9 C1BCA5AD B8F5439C 62291BF5 88B0921F 
+  E417A7D3 78EB91E9 7D452ADC 77CF9561 6D21984F BF4D7EED 491EF98B BB9E1C56 
+  ABEB54F7 B0EAD6B3 3CCEA65F 11E4981C 710B845E D0B46F6C F281A177 E04841C9 
+  621C7C28 DD7879B5 2B7F73D8 0718CCFC 28230519 673FAED4 CDC39C90 0B459BBE 
+  2C1FC829 48B87FB9 017AAEF0 53DD2948 07E2D176 C249BA6D E98253EE CFF38F02 
+  236823C1 07DD0203 010001A3 53305130 1D060355 1D0E0416 0414B0C2 1D049354 
+  49B38E4E AC568812 E1A93417 EB94301F 0603551D 23041830 168014B0 C21D0493 
+  5449B38E 4EAC5688 12E1A934 17EB9430 0F060355 1D130101 FF040530 030101FF 
+  300D0609 2A864886 F70D0101 0B050003 82010100 029F2183 AE81A455 6A64E42E 
+  917F9A59 BC4C1A83 18EA448A EF3C1727 9525E722 31E47A6C A08A81D0 995D3B1B 
+  9820D13D 1A3FBE3E C56596B0 A6B8F20D C148F7D1 E8301C34 F2CDB4BB 46563F07 
+  32BD05D8 62D78342 DB5E1441 63EFDD7B 1B104232 D5D6C225 50A7506E 0B2B2A63 
+  53471C43 01153347 8117CAB0 AA5A4ED6 A4E3E18C 9CB1463E EF29B090 B3CC673A 
+  13F6607C 13A0D608 D736EF9E 33032605 07095732 C6820D62 FB28C952 2805A537 
+  16A7996E 5CFB14B2 E4D40711 17C959C9 EEFFC968 8E1C95B6 5F024D23 58B8056E 
+  213A6F16 4796EFD2 E217016C B30D4478 E40B6362 1EE603A8 DEB539AA 5C9DFFB0 
+  966A2BBB 80F8012A 48C25B57 E7F6B444 9CAC9C87
+  	quit
+!
+memory free low-watermark processor 74862
+!
+diagnostic bootup level minimal
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+!
+enable secret 9 $9$31ISB8wG5gQToU$woXsY0RdbIkhujwxfFmV4siuRORWof6VbJl/qXG5W4k
+!
+username cproust privilege 15 password 0 cisco123
+!
+redundancy
+ mode sso
+!
+!
+!
+!
+!
+lldp run
+!
+class-map match-any system-cpp-police-topology-control
+  description Topology control
+class-map match-any system-cpp-police-sw-forward
+  description Sw forwarding, L2 LVX data, LOGGING
+class-map match-any system-cpp-default
+  description EWLC control, EWLC data, Inter FED 
+class-map match-any system-cpp-police-sys-data
+  description Learning cache ovfl, High Rate App, Exception, EGR Exception, NFL SAMPLED DATA, RPF Failed
+class-map match-any system-cpp-police-punt-webauth
+  description Punt Webauth
+class-map match-any system-cpp-police-l2lvx-control
+  description L2 LVX control packets
+class-map match-any system-cpp-police-forus
+  description Forus Address resolution and Forus traffic
+class-map match-any system-cpp-police-multicast-end-station
+  description MCAST END STATION
+class-map match-any system-cpp-police-multicast
+  description Transit Traffic and MCAST Data
+class-map match-any system-cpp-police-l2-control
+  description L2 control
+class-map match-any system-cpp-police-dot1x-auth
+  description DOT1X Auth
+class-map match-any system-cpp-police-data
+  description ICMP redirect, ICMP_GEN and BROADCAST
+class-map match-any system-cpp-police-stackwise-virt-control
+  description Stackwise Virtual
+class-map match-any non-client-nrt-class
+class-map match-any system-cpp-police-routing-control
+  description Routing control and Low Latency
+class-map match-any system-cpp-police-protocol-snooping
+  description Protocol snooping
+class-map match-any system-cpp-police-dhcp-snooping
+  description DHCP snooping
+class-map match-any system-cpp-police-system-critical
+  description System Critical and Gold Pkt
+!
+policy-map system-cpp-policy
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback1230
+ description "This is a loopback interface"
+ ip address 10.1.1.1 255.255.255.255
+!
+interface GigabitEthernet0/0
+ vrf forwarding Mgmt-vrf
+ ip address 10.0.0.151 255.255.255.0
+ negotiation auto
+!
+interface GigabitEthernet1/0/1
+!
+interface GigabitEthernet1/0/2
+!
+interface GigabitEthernet1/0/3
+!
+interface GigabitEthernet1/0/4
+!
+interface GigabitEthernet1/0/5
+!
+interface GigabitEthernet1/0/6
+!
+interface GigabitEthernet1/0/7
+!
+interface GigabitEthernet1/0/8
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan100
+ description LAX-VLAN100
+ ip address 10.100.1.1 255.255.255.0
+!
+ip forward-protocol nd
+ip tcp mss 1280
+ip tcp window-size 212000
+ip http server
+ip http authentication local
+ip http secure-server
+ip route vrf Mgmt-vrf 0.0.0.0 0.0.0.0 10.0.0.1
+ip ssh bulk-mode 131072
+!
+!
+!
+snmp-server community public RO
+snmp-server community private RW
+snmp-server location Los Angeles, CA
+snmp-server contact Network Operations Center
+!
+control-plane
+ service-policy input system-cpp-policy
+!
+!
+line con 0
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+line vty 5 15
+ login
+ transport input ssh
+!
+!
+!
+!
+!
+!
+end
