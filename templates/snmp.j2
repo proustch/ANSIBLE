@@ -1,0 +1,4 @@
+snmp-server community {{ snmp.get('RO') }} RO
+snmp-server community {{ snmp.get('RW') }} RW
+snmp-server contact  {{ snmp.get('contact') }}
+snmp-server location {{ snmp.get('location') }}

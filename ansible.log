@@ -1,0 +1,799 @@
+2026-09-25 11:47:51,675 p=42366 u=cproust n=ansible INFO| PLAY [PLAY1 PRINT OUT HOSTNAME, GROUPNAME and OS for IOS] *********************************************************************************************************************
+2026-09-25 11:47:51,688 p=42366 u=cproust n=ansible INFO| TASK [TASK17 CONFIGURE CDP AND LLDP ON THE DEVICE] ****************************************************************************************************************************
+2026-09-25 11:47:52,380 p=42366 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 11:47:52,386 p=42366 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 11:47:52,394 p=42379 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /home/cproust/.ssh/config for reading: No such file or directory
+2026-09-25 11:47:52,394 p=42379 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /home/cproust/.ssh/config for reading: No such file or directory
+2026-09-25 11:47:52,400 p=42382 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /home/cproust/.ssh/config for reading: No such file or directory
+2026-09-25 11:47:52,400 p=42382 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /home/cproust/.ssh/config for reading: No such file or directory
+2026-09-25 11:47:52,403 p=42379 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 11:47:52,403 p=42379 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 11:47:52,407 p=42382 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 11:47:52,407 p=42382 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 11:47:54,204 p=42366 u=cproust n=ansible WARNING| [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device
+
+2026-09-25 11:47:54,205 p=42366 u=cproust n=ansible INFO| changed: [c9k]
+2026-09-25 11:47:54,315 p=42366 u=cproust n=ansible INFO| changed: [dist1]
+2026-09-25 11:47:54,325 p=42366 u=cproust n=ansible INFO| TASK [TASK19 EXTRACT VARIABLES FROM HOST_VARS AND GROUP_VARS] *****************************************************************************************************************
+2026-09-25 11:47:55,568 p=42366 u=cproust n=ansible INFO| ok: [c9k]
+2026-09-25 11:47:55,569 p=42366 u=cproust n=ansible INFO| ok: [dist1]
+2026-09-25 11:47:55,574 p=42366 u=cproust n=ansible INFO| PLAY RECAP ********************************************************************************************************************************************************************
+2026-09-25 11:47:55,574 p=42366 u=cproust n=ansible INFO| c9k                        : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-09-25 11:47:55,574 p=42366 u=cproust n=ansible INFO| dist1                      : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-09-25 11:47:55,673 p=42382 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 11:47:55,674 p=42379 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 12:00:59,649 p=43932 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 12:00:59,650 p=43932 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 12:01:00,015 p=43932 u=cproust n=ansible INFO| 1 plays in myplaybook.yml
+2026-09-25 12:01:00,017 p=43932 u=cproust n=ansible INFO| playbook: myplaybook.yml
+2026-09-25 12:01:01,429 p=43968 u=cproust n=ansible WARNING| [WARNING]: Collection at '/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible/_internal/ansible_collections/ansible/_protomatter' does not have a MANIFEST.json file, nor has it galaxy.yml: cannot detect version.
+
+2026-09-25 12:01:01,611 p=43968 u=cproust n=ansible INFO| {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "Profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2026-09-25 12:02:11,220 p=44058 u=cproust n=ansible INFO| PLAY [PLAY1 PRINT OUT HOSTNAME, GROUPNAME and OS for IOS] *********************************************************************************************************************
+2026-09-25 12:02:11,233 p=44058 u=cproust n=ansible INFO| TASK [TASK17 CONFIGURE CDP AND LLDP ON THE DEVICE] ****************************************************************************************************************************
+2026-09-25 12:02:11,916 p=44058 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 12:02:11,917 p=44058 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 12:02:11,941 p=44073 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:02:11,941 p=44073 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:02:11,942 p=44075 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:02:11,942 p=44075 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:02:13,710 p=44058 u=cproust n=ansible WARNING| [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device
+
+2026-09-25 12:02:13,711 p=44058 u=cproust n=ansible INFO| changed: [c9k]
+2026-09-25 12:02:13,825 p=44058 u=cproust n=ansible INFO| changed: [dist1]
+2026-09-25 12:02:13,830 p=44058 u=cproust n=ansible INFO| TASK [TASK19 EXTRACT VARIABLES FROM HOST_VARS AND GROUP_VARS] *****************************************************************************************************************
+2026-09-25 12:02:15,073 p=44058 u=cproust n=ansible INFO| ok: [dist1]
+2026-09-25 12:02:15,074 p=44058 u=cproust n=ansible INFO| ok: [c9k]
+2026-09-25 12:02:15,079 p=44058 u=cproust n=ansible INFO| PLAY RECAP ********************************************************************************************************************************************************************
+2026-09-25 12:02:15,079 p=44058 u=cproust n=ansible INFO| c9k                        : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-09-25 12:02:15,079 p=44058 u=cproust n=ansible INFO| dist1                      : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-09-25 12:02:15,178 p=44075 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 12:02:15,179 p=44073 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 12:08:23,077 p=44332 u=cproust n=ansible INFO| PLAY [PLAY1 PRINT OUT HOSTNAME, GROUPNAME and OS for IOS] *********************************************************************************************************************
+2026-09-25 12:08:23,088 p=44332 u=cproust n=ansible INFO| TASK [TASK17 CONFIGURE CDP AND LLDP ON THE DEVICE] ****************************************************************************************************************************
+2026-09-25 12:08:23,782 p=44332 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 12:08:23,797 p=44332 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 12:08:23,809 p=44345 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:08:23,809 p=44345 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:08:23,816 p=44348 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:08:23,816 p=44348 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:08:25,622 p=44332 u=cproust n=ansible WARNING| [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device
+
+2026-09-25 12:08:25,622 p=44332 u=cproust n=ansible INFO| changed: [c9k]
+2026-09-25 12:08:25,809 p=44332 u=cproust n=ansible INFO| changed: [dist1]
+2026-09-25 12:08:25,820 p=44332 u=cproust n=ansible INFO| TASK [TASK19 EXTRACT VARIABLES FROM HOST_VARS AND GROUP_VARS] *****************************************************************************************************************
+2026-09-25 12:08:27,102 p=44332 u=cproust n=ansible INFO| ok: [dist1]
+2026-09-25 12:08:27,120 p=44332 u=cproust n=ansible INFO| ok: [c9k]
+2026-09-25 12:08:27,126 p=44332 u=cproust n=ansible INFO| PLAY RECAP ********************************************************************************************************************************************************************
+2026-09-25 12:08:27,127 p=44332 u=cproust n=ansible INFO| c9k                        : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-09-25 12:08:27,127 p=44332 u=cproust n=ansible INFO| dist1                      : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-09-25 12:08:27,224 p=44348 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 12:08:27,226 p=44345 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 12:39:31,855 p=44668 u=cproust n=ansible INFO| PLAY [PLAY1 PRINT OUT HOSTNAME, GROUPNAME and OS for IOS] *********************************************************************************************************************
+2026-09-25 12:39:31,865 p=44668 u=cproust n=ansible INFO| TASK [TASK17 CONFIGURE CDP AND LLDP ON THE DEVICE] ****************************************************************************************************************************
+2026-09-25 12:39:32,569 p=44668 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 12:39:32,569 p=44668 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 12:39:32,593 p=44684 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:39:32,593 p=44684 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:39:32,594 p=44681 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:39:32,594 p=44681 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:39:34,414 p=44668 u=cproust n=ansible WARNING| [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device
+
+2026-09-25 12:39:34,414 p=44668 u=cproust n=ansible INFO| changed: [c9k]
+2026-09-25 12:39:34,584 p=44668 u=cproust n=ansible INFO| changed: [dist1]
+2026-09-25 12:39:34,594 p=44668 u=cproust n=ansible INFO| TASK [TASK19 EXTRACT VARIABLES FROM HOST_VARS AND GROUP_VARS] *****************************************************************************************************************
+2026-09-25 12:39:35,869 p=44668 u=cproust n=ansible INFO| ok: [c9k]
+2026-09-25 12:39:35,894 p=44668 u=cproust n=ansible INFO| changed: [dist1]
+2026-09-25 12:39:35,899 p=44668 u=cproust n=ansible INFO| PLAY RECAP ********************************************************************************************************************************************************************
+2026-09-25 12:39:35,899 p=44668 u=cproust n=ansible INFO| c9k                        : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-09-25 12:39:35,899 p=44668 u=cproust n=ansible INFO| dist1                      : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-09-25 12:39:35,998 p=44684 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 12:39:35,998 p=44681 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 12:40:29,505 p=44840 u=cproust n=ansible INFO| PLAY [PLAY1 PRINT OUT HOSTNAME, GROUPNAME and OS for IOS] *********************************************************************************************************************
+2026-09-25 12:40:29,518 p=44840 u=cproust n=ansible INFO| TASK [TASK17 CONFIGURE CDP AND LLDP ON THE DEVICE] ****************************************************************************************************************************
+2026-09-25 12:40:30,214 p=44840 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 12:40:30,221 p=44840 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 12:40:30,238 p=44853 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:40:30,238 p=44853 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:40:30,243 p=44856 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:40:30,243 p=44856 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:40:32,062 p=44840 u=cproust n=ansible WARNING| [WARNING]: To ensure idempotency and correct diff the input configuration lines should be similar to how they appear if present in the running configuration on device
+
+2026-09-25 12:40:32,063 p=44840 u=cproust n=ansible INFO| changed: [c9k]
+2026-09-25 12:40:32,224 p=44840 u=cproust n=ansible INFO| changed: [dist1]
+2026-09-25 12:40:32,228 p=44840 u=cproust n=ansible INFO| TASK [TASK19 EXTRACT VARIABLES FROM HOST_VARS AND GROUP_VARS] *****************************************************************************************************************
+2026-09-25 12:40:33,489 p=44840 u=cproust n=ansible INFO| changed: [dist1]
+2026-09-25 12:40:33,493 p=44840 u=cproust n=ansible INFO| ok: [c9k]
+2026-09-25 12:40:33,497 p=44840 u=cproust n=ansible INFO| PLAY RECAP ********************************************************************************************************************************************************************
+2026-09-25 12:40:33,498 p=44840 u=cproust n=ansible INFO| c9k                        : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-09-25 12:40:33,498 p=44840 u=cproust n=ansible INFO| dist1                      : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-09-25 12:40:33,596 p=44856 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 12:40:33,597 p=44853 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 12:49:36,821 p=45419 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 12:49:36,821 p=45419 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 12:49:36,925 p=45419 u=cproust n=ansible INFO| 1 plays in myplaybook.yml
+2026-09-25 12:49:36,926 p=45419 u=cproust n=ansible INFO| playbook: myplaybook.yml
+2026-09-25 12:49:37,432 p=45424 u=cproust n=ansible WARNING| [WARNING]: Collection at '/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible/_internal/ansible_collections/ansible/_protomatter' does not have a MANIFEST.json file, nor has it galaxy.yml: cannot detect version.
+
+2026-09-25 12:49:37,570 p=45424 u=cproust n=ansible INFO| {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "Profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2026-09-25 12:50:01,816 p=45451 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 12:50:01,816 p=45451 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 12:50:01,930 p=45451 u=cproust n=ansible INFO| 1 plays in myplaybook.yml
+2026-09-25 12:50:01,930 p=45451 u=cproust n=ansible INFO| playbook: myplaybook.yml
+2026-09-25 12:50:02,573 p=45454 u=cproust n=ansible WARNING| [WARNING]: Collection at '/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible/_internal/ansible_collections/ansible/_protomatter' does not have a MANIFEST.json file, nor has it galaxy.yml: cannot detect version.
+
+2026-09-25 12:50:02,670 p=45454 u=cproust n=ansible INFO| {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "Profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2026-09-25 12:50:11,800 p=45457 u=cproust n=ansible INFO| PLAY [PLAY1 PRINT OUT HOSTNAME, GROUPNAME and OS for IOS] *********************************************************************************************************************
+2026-09-25 12:50:11,810 p=45457 u=cproust n=ansible INFO| TASK [TASK19 EXTRACT VARIABLES FROM HOST_VARS AND GROUP_VARS] *****************************************************************************************************************
+2026-09-25 12:50:12,510 p=45457 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 12:50:12,520 p=45457 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 12:50:13,189 p=45457 u=cproust n=ansible INFO| ok: [c9k]
+2026-09-25 12:50:13,190 p=45457 u=cproust n=ansible INFO| ok: [dist1]
+2026-09-25 12:50:13,194 p=45457 u=cproust n=ansible INFO| TASK [TASK20 BUILD AND PUSH SNMP CONFIGURATION TO DEVICE] *********************************************************************************************************************
+2026-09-25 12:50:14,362 p=45457 u=cproust n=ansible INFO| changed: [dist1]
+2026-09-25 12:50:14,362 p=45457 u=cproust n=ansible INFO| changed: [c9k]
+2026-09-25 12:50:14,365 p=45457 u=cproust n=ansible INFO| PLAY RECAP ********************************************************************************************************************************************************************
+2026-09-25 12:50:14,365 p=45457 u=cproust n=ansible INFO| c9k                        : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-09-25 12:50:14,365 p=45457 u=cproust n=ansible INFO| dist1                      : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-09-25 12:50:43,696 p=45470 u=cproust n=ansible INFO| persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2026-09-25 12:50:43,705 p=45473 u=cproust n=ansible INFO| persistent connection idle timeout triggered, timeout value is 30 secs.
+See the timeout setting options in the Network Debug and Troubleshooting Guide.
+2026-09-25 12:50:43,800 p=45470 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 12:50:43,807 p=45473 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 12:51:26,309 p=45723 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 12:51:26,309 p=45723 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 12:51:26,412 p=45723 u=cproust n=ansible ERROR| [ERROR]: no module/action detected in task.
+Origin: /home/cproust/Documents/ANSIBLE/myplaybook.yml:90:7
+
+88  #       parents:
+89   #        - interface Loopback1230
+90     - name: "TASK19 EXTRACT VARIABLES FROM HOST_VARS AND GROUP_VARS"
+         ^ column 7
+
+
+2026-09-25 12:51:46,205 p=45802 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 12:51:46,205 p=45802 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 12:51:46,305 p=45802 u=cproust n=ansible ERROR| [ERROR]: no module/action detected in task.
+Origin: /home/cproust/Documents/ANSIBLE/myplaybook.yml:90:7
+
+88  #       parents:
+89   #        - interface Loopback1230
+90     - name: "TASK19 EXTRACT VARIABLES FROM HOST_VARS AND GROUP_VARS"
+         ^ column 7
+
+
+2026-09-25 12:51:51,487 p=45821 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 12:51:51,488 p=45821 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 12:51:51,598 p=45821 u=cproust n=ansible ERROR| [ERROR]: no module/action detected in task.
+Origin: /home/cproust/Documents/ANSIBLE/myplaybook.yml:90:7
+
+88  #       parents:
+89   #        - interface Loopback1230
+90     - name: "TASK19 EXTRACT VARIABLES FROM HOST_VARS AND GROUP_VARS"
+         ^ column 7
+
+
+2026-09-25 12:52:09,353 p=45823 u=cproust n=ansible ERROR| [ERROR]: no module/action detected in task.
+Origin: /home/cproust/Documents/ANSIBLE/myplaybook.yml:90:7
+
+88  #       parents:
+89   #        - interface Loopback1230
+90     - name: "TASK19 EXTRACT VARIABLES FROM HOST_VARS AND GROUP_VARS"
+         ^ column 7
+
+
+2026-09-25 12:52:24,945 p=45882 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 12:52:24,946 p=45882 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 12:52:25,055 p=45882 u=cproust n=ansible INFO| redirecting (type: modules) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 12:52:25,056 p=45882 u=cproust n=ansible INFO| redirecting (type: action) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 12:52:25,056 p=45882 u=cproust n=ansible INFO| 1 plays in myplaybook.yml
+2026-09-25 12:52:25,057 p=45882 u=cproust n=ansible INFO| playbook: myplaybook.yml
+2026-09-25 12:52:25,593 p=45884 u=cproust n=ansible WARNING| [WARNING]: Collection at '/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible/_internal/ansible_collections/ansible/_protomatter' does not have a MANIFEST.json file, nor has it galaxy.yml: cannot detect version.
+
+2026-09-25 12:52:25,720 p=45884 u=cproust n=ansible INFO| {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "Profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2026-09-25 12:52:27,262 p=45886 u=cproust n=ansible INFO| PLAY [PLAY1 PRINT OUT HOSTNAME, GROUPNAME and OS for IOS] *********************************************************************************************************************
+2026-09-25 12:52:27,273 p=45886 u=cproust n=ansible INFO| TASK [TASK21 BUILD AND PUSH SNMP CONFIGURATION TO DEVICE] *********************************************************************************************************************
+2026-09-25 12:52:27,987 p=45886 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 12:52:27,997 p=45886 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 12:52:28,002 p=45886 u=cproust n=ansible ERROR| [ERROR]: Task failed: Action failed: Unsupported parameters for (ansible.builtin.cli_config) module: lines. Supported parameters include: backup, backup_options, commit, commit_comment, config, defaults, diff_ignore_lines, diff_match, diff_replace, multiline_delimiter, replace, rollback.
+Origin: /home/cproust/Documents/ANSIBLE/myplaybook.yml:100:7
+
+ 98 #        dest: "show_outputs/{{ inventory_hostname }}_snmp.txt"
+ 99 #        mode: "0644"
+100     - name: "TASK21 BUILD AND PUSH SNMP CONFIGURATION TO DEVICE"
+          ^ column 7
+
+
+2026-09-25 12:52:28,003 p=45886 u=cproust n=ansible INFO| fatal: [dist1]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (ansible.builtin.cli_config) module: lines. Supported parameters include: backup, backup_options, commit, commit_comment, config, defaults, diff_ignore_lines, diff_match, diff_replace, multiline_delimiter, replace, rollback."}
+2026-09-25 12:52:28,010 p=45886 u=cproust n=ansible INFO| fatal: [c9k]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (ansible.builtin.cli_config) module: lines. Supported parameters include: backup, backup_options, commit, commit_comment, config, defaults, diff_ignore_lines, diff_match, diff_replace, multiline_delimiter, replace, rollback."}
+2026-09-25 12:52:28,013 p=45886 u=cproust n=ansible INFO| PLAY RECAP ********************************************************************************************************************************************************************
+2026-09-25 12:52:28,013 p=45886 u=cproust n=ansible INFO| c9k                        : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-09-25 12:52:28,013 p=45886 u=cproust n=ansible INFO| dist1                      : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-09-25 12:52:28,112 p=45899 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 12:52:28,113 p=45902 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 12:53:20,955 p=45987 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 12:53:20,955 p=45987 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 12:53:21,061 p=45987 u=cproust n=ansible INFO| redirecting (type: modules) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 12:53:21,062 p=45987 u=cproust n=ansible INFO| redirecting (type: action) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 12:53:21,062 p=45987 u=cproust n=ansible INFO| 1 plays in myplaybook.yml
+2026-09-25 12:53:21,063 p=45987 u=cproust n=ansible INFO| playbook: myplaybook.yml
+2026-09-25 12:53:21,631 p=45996 u=cproust n=ansible WARNING| [WARNING]: Collection at '/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible/_internal/ansible_collections/ansible/_protomatter' does not have a MANIFEST.json file, nor has it galaxy.yml: cannot detect version.
+
+2026-09-25 12:53:21,753 p=45996 u=cproust n=ansible INFO| {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "Profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2026-09-25 12:53:22,575 p=46003 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 12:53:22,575 p=46003 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 12:53:22,679 p=46003 u=cproust n=ansible INFO| redirecting (type: modules) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 12:53:22,680 p=46003 u=cproust n=ansible INFO| redirecting (type: action) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 12:53:22,680 p=46003 u=cproust n=ansible INFO| 1 plays in myplaybook.yml
+2026-09-25 12:53:22,681 p=46003 u=cproust n=ansible INFO| playbook: myplaybook.yml
+2026-09-25 12:53:23,232 p=46007 u=cproust n=ansible WARNING| [WARNING]: Collection at '/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible/_internal/ansible_collections/ansible/_protomatter' does not have a MANIFEST.json file, nor has it galaxy.yml: cannot detect version.
+
+2026-09-25 12:53:23,333 p=46007 u=cproust n=ansible INFO| {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "Profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2026-09-25 12:53:40,426 p=46011 u=cproust n=ansible INFO| PLAY [PLAY1 PRINT OUT HOSTNAME, GROUPNAME and OS for IOS] *********************************************************************************************************************
+2026-09-25 12:53:40,436 p=46011 u=cproust n=ansible INFO| TASK [TASK21 BUILD AND PUSH SNMP CONFIGURATION TO DEVICE] *********************************************************************************************************************
+2026-09-25 12:53:41,139 p=46011 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 12:53:41,157 p=46024 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:53:41,157 p=46024 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:53:41,162 p=46011 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 12:53:41,175 p=46027 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:53:41,175 p=46027 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:53:43,041 p=46011 u=cproust n=ansible ERROR| [ERROR]: Task failed: Action failed: b"['snmp-server community public RO\\nsnmp-server community private RW\\nsnmp-server contact  Network Operations Center\\nsnmp-server location Los Angeles, CA']\r\n['snmp-server community public RO\\nsnmp-server community private RW\\nsnmp-server contact  Network Operations Center\\nsnmp-server location Los Angeles, CA']\r\n^\r\n% Invalid input detected at '^' marker.\r\n\r\nSW5(config)#"
+Origin: /home/cproust/Documents/ANSIBLE/myplaybook.yml:100:7
+
+ 98 #        dest: "show_outputs/{{ inventory_hostname }}_snmp.txt"
+ 99 #        mode: "0644"
+100     - name: "TASK21 BUILD AND PUSH SNMP CONFIGURATION TO DEVICE"
+          ^ column 7
+
+
+2026-09-25 12:53:43,042 p=46011 u=cproust n=ansible INFO| fatal: [c9k]: FAILED! => {"changed": false, "msg": "b\"['snmp-server community public RO\\\\nsnmp-server community private RW\\\\nsnmp-server contact  Network Operations Center\\\\nsnmp-server location Los Angeles, CA']\\r\\n['snmp-server community public RO\\\\nsnmp-server community private RW\\\\nsnmp-server contact  Network Operations Center\\\\nsnmp-server location Los Angeles, CA']\\r\\n^\\r\\n% Invalid input detected at '^' marker.\\r\\n\\r\\nSW5(config)#\""}
+2026-09-25 12:53:43,119 p=46011 u=cproust n=ansible ERROR| [ERROR]: Task failed: Action failed: b"['snmp-server community public RO\\nsnmp-server community private RW\\nsnmp-server contact  Network Operations Center\\nsnmp-server location Global']\r\n['snmp-server community public RO\\nsnmp-server community private RW\\nsnmp-server contact  Network Operations Center\\nsnmp-server location Global']\r\n^\r\n% Invalid input detected at '^' marker.\r\n\r\nDIST1(config)#"
+Origin: /home/cproust/Documents/ANSIBLE/myplaybook.yml:100:7
+
+ 98 #        dest: "show_outputs/{{ inventory_hostname }}_snmp.txt"
+ 99 #        mode: "0644"
+100     - name: "TASK21 BUILD AND PUSH SNMP CONFIGURATION TO DEVICE"
+          ^ column 7
+
+
+2026-09-25 12:53:43,120 p=46011 u=cproust n=ansible INFO| fatal: [dist1]: FAILED! => {"changed": false, "msg": "b\"['snmp-server community public RO\\\\nsnmp-server community private RW\\\\nsnmp-server contact  Network Operations Center\\\\nsnmp-server location Global']\\r\\n['snmp-server community public RO\\\\nsnmp-server community private RW\\\\nsnmp-server contact  Network Operations Center\\\\nsnmp-server location Global']\\r\\n^\\r\\n% Invalid input detected at '^' marker.\\r\\n\\r\\nDIST1(config)#\""}
+2026-09-25 12:53:43,126 p=46011 u=cproust n=ansible INFO| PLAY RECAP ********************************************************************************************************************************************************************
+2026-09-25 12:53:43,127 p=46011 u=cproust n=ansible INFO| c9k                        : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-09-25 12:53:43,127 p=46011 u=cproust n=ansible INFO| dist1                      : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2026-09-25 12:53:43,225 p=46027 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 12:53:43,226 p=46024 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 12:56:31,133 p=46120 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 12:56:31,133 p=46120 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 12:56:31,235 p=46120 u=cproust n=ansible INFO| redirecting (type: modules) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 12:56:31,236 p=46120 u=cproust n=ansible INFO| redirecting (type: action) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 12:56:31,236 p=46120 u=cproust n=ansible INFO| 1 plays in myplaybook.yml
+2026-09-25 12:56:31,237 p=46120 u=cproust n=ansible INFO| playbook: myplaybook.yml
+2026-09-25 12:56:31,805 p=46124 u=cproust n=ansible WARNING| [WARNING]: Collection at '/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible/_internal/ansible_collections/ansible/_protomatter' does not have a MANIFEST.json file, nor has it galaxy.yml: cannot detect version.
+
+2026-09-25 12:56:31,917 p=46124 u=cproust n=ansible INFO| {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "Profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2026-09-25 12:56:38,418 p=46168 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 12:56:38,418 p=46168 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 12:56:38,522 p=46168 u=cproust n=ansible INFO| redirecting (type: modules) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 12:56:38,523 p=46168 u=cproust n=ansible INFO| redirecting (type: action) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 12:56:38,523 p=46168 u=cproust n=ansible INFO| 1 plays in myplaybook.yml
+2026-09-25 12:56:38,524 p=46168 u=cproust n=ansible INFO| playbook: myplaybook.yml
+2026-09-25 12:56:39,077 p=46172 u=cproust n=ansible WARNING| [WARNING]: Collection at '/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible/_internal/ansible_collections/ansible/_protomatter' does not have a MANIFEST.json file, nor has it galaxy.yml: cannot detect version.
+
+2026-09-25 12:56:39,202 p=46172 u=cproust n=ansible INFO| {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "Profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2026-09-25 12:56:56,518 p=46185 u=cproust n=ansible INFO| PLAY [PLAY1 PRINT OUT HOSTNAME, GROUPNAME and OS for IOS] *********************************************************************************************************************
+2026-09-25 12:56:56,531 p=46185 u=cproust n=ansible INFO| TASK [TASK21 BUILD AND PUSH SNMP CONFIGURATION TO DEVICE] *********************************************************************************************************************
+2026-09-25 12:56:57,262 p=46185 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 12:56:57,262 p=46185 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 12:56:57,282 p=46199 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:56:57,282 p=46199 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:56:57,284 p=46202 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:56:57,284 p=46202 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 12:56:59,673 p=46185 u=cproust n=ansible WARNING| [WARNING]: T
+
+2026-09-25 12:56:59,673 p=46185 u=cproust n=ansible WARNING| [WARNING]: o
+
+2026-09-25 12:56:59,674 p=46185 u=cproust n=ansible WARNING| [WARNING]: 
+
+2026-09-25 12:56:59,674 p=46185 u=cproust n=ansible WARNING| [WARNING]: e
+
+2026-09-25 12:56:59,675 p=46185 u=cproust n=ansible WARNING| [WARNING]: n
+
+2026-09-25 12:56:59,675 p=46185 u=cproust n=ansible WARNING| [WARNING]: s
+
+2026-09-25 12:56:59,675 p=46185 u=cproust n=ansible WARNING| [WARNING]: u
+
+2026-09-25 12:56:59,676 p=46185 u=cproust n=ansible WARNING| [WARNING]: r
+
+2026-09-25 12:56:59,676 p=46185 u=cproust n=ansible WARNING| [WARNING]: i
+
+2026-09-25 12:56:59,676 p=46185 u=cproust n=ansible WARNING| [WARNING]: d
+
+2026-09-25 12:56:59,677 p=46185 u=cproust n=ansible WARNING| [WARNING]: m
+
+2026-09-25 12:56:59,677 p=46185 u=cproust n=ansible WARNING| [WARNING]: p
+
+2026-09-25 12:56:59,677 p=46185 u=cproust n=ansible WARNING| [WARNING]: t
+
+2026-09-25 12:56:59,678 p=46185 u=cproust n=ansible WARNING| [WARNING]: c
+
+2026-09-25 12:56:59,678 p=46185 u=cproust n=ansible WARNING| [WARNING]: y
+
+2026-09-25 12:56:59,678 p=46185 u=cproust n=ansible WARNING| [WARNING]: a
+
+2026-09-25 12:56:59,679 p=46185 u=cproust n=ansible WARNING| [WARNING]: f
+
+2026-09-25 12:56:59,679 p=46185 u=cproust n=ansible WARNING| [WARNING]: h
+
+2026-09-25 12:56:59,679 p=46185 u=cproust n=ansible WARNING| [WARNING]: g
+
+2026-09-25 12:56:59,679 p=46185 u=cproust n=ansible WARNING| [WARNING]: l
+
+2026-09-25 12:56:59,679 p=46185 u=cproust n=ansible WARNING| [WARNING]: b
+
+2026-09-25 12:56:59,680 p=46185 u=cproust n=ansible WARNING| [WARNING]: w
+
+2026-09-25 12:56:59,680 p=46185 u=cproust n=ansible WARNING| [WARNING]: v
+
+2026-09-25 12:56:59,680 p=46185 u=cproust n=ansible INFO| changed: [c9k]
+2026-09-25 12:56:59,787 p=46185 u=cproust n=ansible INFO| changed: [dist1]
+2026-09-25 12:56:59,794 p=46185 u=cproust n=ansible INFO| PLAY RECAP ********************************************************************************************************************************************************************
+2026-09-25 12:56:59,795 p=46185 u=cproust n=ansible INFO| c9k                        : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-09-25 12:56:59,795 p=46185 u=cproust n=ansible INFO| dist1                      : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-09-25 12:56:59,893 p=46202 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 12:56:59,894 p=46199 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 12:59:39,596 p=46340 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 12:59:39,596 p=46340 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 12:59:39,724 p=46340 u=cproust n=ansible INFO| redirecting (type: modules) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 12:59:39,725 p=46340 u=cproust n=ansible INFO| redirecting (type: action) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 12:59:39,726 p=46340 u=cproust n=ansible INFO| redirecting (type: modules) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 12:59:39,726 p=46340 u=cproust n=ansible INFO| redirecting (type: action) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 12:59:39,726 p=46340 u=cproust n=ansible INFO| 1 plays in myplaybook.yml
+2026-09-25 12:59:39,727 p=46340 u=cproust n=ansible INFO| playbook: myplaybook.yml
+2026-09-25 12:59:40,400 p=46344 u=cproust n=ansible WARNING| [WARNING]: Collection at '/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible/_internal/ansible_collections/ansible/_protomatter' does not have a MANIFEST.json file, nor has it galaxy.yml: cannot detect version.
+
+2026-09-25 12:59:40,513 p=46344 u=cproust n=ansible INFO| {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "Profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2026-09-25 13:00:26,993 p=46536 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 13:00:26,994 p=46536 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 13:00:27,099 p=46536 u=cproust n=ansible INFO| redirecting (type: modules) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 13:00:27,100 p=46536 u=cproust n=ansible INFO| redirecting (type: action) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 13:00:27,100 p=46536 u=cproust n=ansible INFO| redirecting (type: modules) ansible.builtin.cli_command to ansible.netcommon.cli_command
+2026-09-25 13:00:27,100 p=46536 u=cproust n=ansible INFO| redirecting (type: action) ansible.builtin.cli_command to ansible.netcommon.cli_command
+2026-09-25 13:00:27,101 p=46536 u=cproust n=ansible INFO| 1 plays in myplaybook.yml
+2026-09-25 13:00:27,101 p=46536 u=cproust n=ansible INFO| playbook: myplaybook.yml
+2026-09-25 13:00:27,628 p=46539 u=cproust n=ansible WARNING| [WARNING]: Collection at '/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible/_internal/ansible_collections/ansible/_protomatter' does not have a MANIFEST.json file, nor has it galaxy.yml: cannot detect version.
+
+2026-09-25 13:00:27,753 p=46539 u=cproust n=ansible INFO| {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "Profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2026-09-25 13:00:33,479 p=46578 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 13:00:33,480 p=46578 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 13:00:33,583 p=46578 u=cproust n=ansible INFO| redirecting (type: modules) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 13:00:33,583 p=46578 u=cproust n=ansible INFO| redirecting (type: action) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 13:00:33,584 p=46578 u=cproust n=ansible INFO| redirecting (type: modules) ansible.builtin.cli_command to ansible.netcommon.cli_command
+2026-09-25 13:00:33,584 p=46578 u=cproust n=ansible INFO| redirecting (type: action) ansible.builtin.cli_command to ansible.netcommon.cli_command
+2026-09-25 13:00:33,584 p=46578 u=cproust n=ansible INFO| 1 plays in myplaybook.yml
+2026-09-25 13:00:33,585 p=46578 u=cproust n=ansible INFO| playbook: myplaybook.yml
+2026-09-25 13:00:34,172 p=46582 u=cproust n=ansible WARNING| [WARNING]: Collection at '/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible/_internal/ansible_collections/ansible/_protomatter' does not have a MANIFEST.json file, nor has it galaxy.yml: cannot detect version.
+
+2026-09-25 13:00:34,283 p=46582 u=cproust n=ansible INFO| {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "Profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2026-09-25 13:00:37,210 p=46606 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 13:00:37,210 p=46606 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 13:00:37,323 p=46606 u=cproust n=ansible INFO| redirecting (type: modules) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 13:00:37,324 p=46606 u=cproust n=ansible INFO| redirecting (type: action) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 13:00:37,325 p=46606 u=cproust n=ansible INFO| redirecting (type: modules) ansible.builtin.cli_command to ansible.netcommon.cli_command
+2026-09-25 13:00:37,325 p=46606 u=cproust n=ansible INFO| redirecting (type: action) ansible.builtin.cli_command to ansible.netcommon.cli_command
+2026-09-25 13:00:37,325 p=46606 u=cproust n=ansible INFO| 1 plays in myplaybook.yml
+2026-09-25 13:00:37,326 p=46606 u=cproust n=ansible INFO| playbook: myplaybook.yml
+2026-09-25 13:00:37,814 p=46609 u=cproust n=ansible WARNING| [WARNING]: Collection at '/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible/_internal/ansible_collections/ansible/_protomatter' does not have a MANIFEST.json file, nor has it galaxy.yml: cannot detect version.
+
+2026-09-25 13:00:37,954 p=46609 u=cproust n=ansible INFO| {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "Profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2026-09-25 13:00:51,360 p=46629 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 13:00:51,360 p=46629 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 13:00:51,473 p=46629 u=cproust n=ansible INFO| redirecting (type: modules) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 13:00:51,473 p=46629 u=cproust n=ansible INFO| redirecting (type: action) ansible.builtin.cli_config to ansible.netcommon.cli_config
+2026-09-25 13:00:51,474 p=46629 u=cproust n=ansible INFO| redirecting (type: modules) ansible.builtin.cli_command to ansible.netcommon.cli_command
+2026-09-25 13:00:51,474 p=46629 u=cproust n=ansible INFO| redirecting (type: action) ansible.builtin.cli_command to ansible.netcommon.cli_command
+2026-09-25 13:00:51,475 p=46629 u=cproust n=ansible INFO| 1 plays in myplaybook.yml
+2026-09-25 13:00:51,475 p=46629 u=cproust n=ansible INFO| playbook: myplaybook.yml
+2026-09-25 13:00:52,010 p=46631 u=cproust n=ansible WARNING| [WARNING]: Collection at '/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible/_internal/ansible_collections/ansible/_protomatter' does not have a MANIFEST.json file, nor has it galaxy.yml: cannot detect version.
+
+2026-09-25 13:00:52,143 p=46631 u=cproust n=ansible INFO| {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "Profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2026-09-25 13:00:57,418 p=46634 u=cproust n=ansible INFO| PLAY [PLAY1 PRINT OUT HOSTNAME, GROUPNAME and OS for IOS] *********************************************************************************************************************
+2026-09-25 13:00:57,431 p=46634 u=cproust n=ansible INFO| TASK [TASK21 BUILD AND PUSH SNMP CONFIGURATION TO DEVICE] *********************************************************************************************************************
+2026-09-25 13:00:58,140 p=46634 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 13:00:58,150 p=46634 u=cproust n=ansible INFO| network_os is set to cisco.ios.ios
+2026-09-25 13:00:58,160 p=46647 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 13:00:58,160 p=46647 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 13:00:58,168 p=46650 n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 13:00:58,168 p=46650 u=cproust n=ansible-pylibssh WARNING| ssh_strict_fopen: Failed to open a file /etc/ssh/ssh_known_hosts for reading: No such file or directory
+2026-09-25 13:01:00,014 p=46634 u=cproust n=ansible WARNING| [WARNING]: T
+
+2026-09-25 13:01:00,014 p=46634 u=cproust n=ansible WARNING| [WARNING]: o
+
+2026-09-25 13:01:00,014 p=46634 u=cproust n=ansible WARNING| [WARNING]: 
+
+2026-09-25 13:01:00,015 p=46634 u=cproust n=ansible WARNING| [WARNING]: e
+
+2026-09-25 13:01:00,015 p=46634 u=cproust n=ansible WARNING| [WARNING]: n
+
+2026-09-25 13:01:00,015 p=46634 u=cproust n=ansible WARNING| [WARNING]: s
+
+2026-09-25 13:01:00,016 p=46634 u=cproust n=ansible WARNING| [WARNING]: u
+
+2026-09-25 13:01:00,016 p=46634 u=cproust n=ansible WARNING| [WARNING]: r
+
+2026-09-25 13:01:00,016 p=46634 u=cproust n=ansible WARNING| [WARNING]: i
+
+2026-09-25 13:01:00,017 p=46634 u=cproust n=ansible WARNING| [WARNING]: d
+
+2026-09-25 13:01:00,017 p=46634 u=cproust n=ansible WARNING| [WARNING]: m
+
+2026-09-25 13:01:00,017 p=46634 u=cproust n=ansible WARNING| [WARNING]: p
+
+2026-09-25 13:01:00,017 p=46634 u=cproust n=ansible WARNING| [WARNING]: t
+
+2026-09-25 13:01:00,018 p=46634 u=cproust n=ansible WARNING| [WARNING]: c
+
+2026-09-25 13:01:00,018 p=46634 u=cproust n=ansible WARNING| [WARNING]: y
+
+2026-09-25 13:01:00,018 p=46634 u=cproust n=ansible WARNING| [WARNING]: a
+
+2026-09-25 13:01:00,018 p=46634 u=cproust n=ansible WARNING| [WARNING]: f
+
+2026-09-25 13:01:00,019 p=46634 u=cproust n=ansible WARNING| [WARNING]: h
+
+2026-09-25 13:01:00,019 p=46634 u=cproust n=ansible WARNING| [WARNING]: g
+
+2026-09-25 13:01:00,019 p=46634 u=cproust n=ansible WARNING| [WARNING]: l
+
+2026-09-25 13:01:00,019 p=46634 u=cproust n=ansible WARNING| [WARNING]: b
+
+2026-09-25 13:01:00,020 p=46634 u=cproust n=ansible WARNING| [WARNING]: w
+
+2026-09-25 13:01:00,020 p=46634 u=cproust n=ansible WARNING| [WARNING]: v
+
+2026-09-25 13:01:00,020 p=46634 u=cproust n=ansible INFO| changed: [c9k]
+2026-09-25 13:01:00,147 p=46634 u=cproust n=ansible INFO| changed: [dist1]
+2026-09-25 13:01:00,154 p=46634 u=cproust n=ansible INFO| TASK [TASK22 VERIFYSNMP CONFIGURATION TO DEVICE] ******************************************************************************************************************************
+2026-09-25 13:01:00,969 p=46634 u=cproust n=ansible INFO| ok: [dist1]
+2026-09-25 13:01:01,008 p=46634 u=cproust n=ansible INFO| ok: [c9k]
+2026-09-25 13:01:01,019 p=46634 u=cproust n=ansible INFO| PLAY RECAP ********************************************************************************************************************************************************************
+2026-09-25 13:01:01,020 p=46634 u=cproust n=ansible INFO| c9k                        : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-09-25 13:01:01,020 p=46634 u=cproust n=ansible INFO| dist1                      : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-09-25 13:01:01,117 p=46650 u=cproust n=ansible INFO| shutdown complete
+2026-09-25 13:01:01,119 p=46647 u=cproust n=ansible INFO| shutdown complete

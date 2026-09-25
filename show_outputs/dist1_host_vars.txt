@@ -1,0 +1,8 @@
+The current device ansible is working on is:
+   dist1
+
+The device is part of the group:
+   eve
+
+The site_code for this device is:
+   EVE

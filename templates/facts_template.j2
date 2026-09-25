@@ -1,0 +1,15 @@
+Sandbox gather IOS facts:
+Hostname: {{ ansible_net_hostname }}
+OS Version: {{ ansible_net_version }}
+Serial Number: {{ ansible_net_serialnum }}
+Firmware Version: {{ ansible_net_image }}
+{% for iname,idata in raw_facts['ansible_facts']['ansible_net_interfaces'].items() %}
+Interface: {{ iname }}
+  Description: {{ idata.description }}
+  MAC Address: {{ idata.macaddress }}
+{% if idata.ipv4 != [] %}
+  IP Address: {{ idata.ipv4[0].address }}
+  Subnet Mask: {{ idata.ipv4[0].subnet }}
+{% endif %}
+  Status: {{ idata.operstatus }}
+{% endfor %}

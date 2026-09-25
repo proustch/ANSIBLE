@@ -1,0 +1,47 @@
+Sandbox gather IOS facts:
+Hostname: SW5
+OS Version: 17.12.01prd9
+Serial Number: EB3DCC2385E
+Firmware Version: bootflash:packages.conf
+Interface: Vlan1
+  Description: 
+  MAC Address: 5000.0007.0047
+  Status: down 
+Interface: GigabitEthernet0/0
+  Description: 
+  MAC Address: 5000.0007.0000
+  IP Address: 10.0.0.151
+  Subnet Mask: 24
+  Status: up
+Interface: GigabitEthernet1/0/1
+  Description: 
+  MAC Address: 5000.0007.0001
+  Status: up
+Interface: GigabitEthernet1/0/2
+  Description: 
+  MAC Address: 5000.0007.0002
+  Status: up
+Interface: GigabitEthernet1/0/3
+  Description: 
+  MAC Address: 5000.0007.0003
+  Status: up
+Interface: GigabitEthernet1/0/4
+  Description: 
+  MAC Address: 5000.0007.0004
+  Status: up
+Interface: GigabitEthernet1/0/5
+  Description: 
+  MAC Address: 5000.0007.0005
+  Status: up
+Interface: GigabitEthernet1/0/6
+  Description: 
+  MAC Address: 5000.0007.0006
+  Status: up
+Interface: GigabitEthernet1/0/7
+  Description: 
+  MAC Address: 5000.0007.0007
+  Status: up
+Interface: GigabitEthernet1/0/8
+  Description: 
+  MAC Address: 5000.0007.0008
+  Status: up

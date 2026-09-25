@@ -1,0 +1,8 @@
+loopback_ip: "10.1.1.1"
+loopback_mask: "255.255.255.255"
+site_code: "LAX"
+snmp:
+  RO: "public"
+  RW: "private"
+  contact: "Network Operations Center"
+  location: "Los Angeles, CA"

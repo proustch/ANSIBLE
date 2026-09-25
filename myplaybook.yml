@@ -1,7 +1,7 @@
 ---
 - name: "PLAY1 PRINT OUT HOSTNAME, GROUPNAME and OS for IOS"
   hosts: eve
-  gather_facts: true
+  gather_facts: false
 
   tasks:
 #    - name: "TASK1 : PRINT DEBUG MAGIC VARIABLES FOR IOS"
@@ -46,16 +46,60 @@
 #        state: directory
 #        mode: "0755"
 #      run_once: true
-    - name: "TASK11 EXTRACT VLANS FROM SHOW COMMAND OUTPUT"
-      cisco.ios.ios_vlans:
-        state: gathered
-      register: vlan_output
-    - name: "TASK12 PRINT DEBUG VLAN OUTPUT"
-      ansible.builtin.debug:
-        var: vlan_output.gathered
-
-    - name: "TASK10 WRITE J2 TEMPLATE TO FORMAT AND SAVE OUTPUT"
-      ansible.builtin.template:
-        src: "templates/show_command.j2"
-        dest: "show_outputs/{{ inventory_hostname }}_show_command.txt"
-        mode: "0644"
+#    - name: "TASK11 EXTRACT VLANS FROM SHOW COMMAND OUTPUT"
+#      cisco.ios.ios_vlans:
+#        state: gathered
+#      register: vlan_output
+#   - name: "TASK12 PRINT DEBUG VLAN OUTPUT"
+#      ansible.builtin.debug:
+#        var: vlan_output.gathered
+#
+#    - name: "TASK10 WRITE J2 TEMPLATE TO FORMAT AND SAVE OUTPUT"
+#      ansible.builtin.template:
+#        src: "templates/show_command.j2"
+#        dest: "show_outputs/{{ inventory_hostname }}_show_command.txt"
+#       mode: "0644"
+#    - name: "TASK13 GATHER IOS DEVICE FACT AND STORE IT INTO MEMORY"
+#      cisco.ios.ios_facts:
+#        gather_subset:
+#          - "all"
+#      register: raw_facts
+#    - name: "TASK14 TAKE FACTS INTO MEMORY AND SEND THEM TO A J2 TEMPLATE"
+#      ansible.builtin.debug:
+#        var: raw_facts
+#    - name: "TASK15 TAKE FACTS INTO MEMORY AND SEND THEM TO A J2 TEMPLATE"
+#      ansible.builtin.copy:
+#        content: "{{ lookup('template', 'facts_template.j2') }}"
+#        dest: "show_outputs/{{ inventory_hostname }}_facts.txt"
+#        mode: "0644"
+#   - name: "TASK16 TAKE FACTS INTO MEMORY AND SEND THEM TO A J2 TEMPLATE"
+#      ansible.builtin.debug:
+#        msg: raw_facts
+#    - name: "TASK17 CONFIGURE CDP AND LLDP ON THE DEVICE"
+#      cisco.ios.ios_config:
+#        lines:
+#          - "cdp run"
+#          - "lldp run"
+#    - name: "TASK18 CONFIGURE A LOOPBACK WITH A VARIABLE"
+#      cisco.ios.ios_config:
+#        lines:
+#          - description "This is a loopback interface"
+#          - ip address {{ loopback_ip }} {{ loopback_mask }}
+ #       parents:
+  #        - interface Loopback1230
+#    - name: "TASK19 EXTRACT VARIABLES FROM HOST_VARS AND GROUP_VARS"
+#      ansible.builtin.template:
+#        src: "templates/host_vars_template.j2"
+#        dest: "show_outputs/{{ inventory_hostname }}_host_vars.txt"
+#        mode: "0644"
+#    - name: "TASK20 BUILD AND PUSH SNMP CONFIGURATION TO DEVICE"
+#      ansible.builtin.template:
+#        src: "templates/snmp.j2"
+#        dest: "show_outputs/{{ inventory_hostname }}_snmp.txt"
+#        mode: "0644"
+    - name: "TASK21 BUILD AND PUSH SNMP CONFIGURATION TO DEVICE"
+      ansible.builtin.cli_config:
+        config: "{{ lookup('template', 'templates/snmp.j2') }}"
+    - name: "TASK22 VERIFYSNMP CONFIGURATION TO DEVICE"
+      ansible.builtin.cli_command:
+        command: "show run | include {{ snmp.get('RO') }}"

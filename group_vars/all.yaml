@@ -1,0 +1,6 @@
+site_code: "ALL"
+snmp:
+  RO: "public"
+  RW: "private"
+  contact: "Network Operations Center"
+  location: "Global"

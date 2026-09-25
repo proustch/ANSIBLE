@@ -1,0 +1,4 @@
+Sandbox gather IOS facts:
+Hostname: DIST1
+OS Version: 17.12.1
+Serial Number: 88082433
