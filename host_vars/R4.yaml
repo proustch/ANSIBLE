@@ -1,0 +1,5 @@
+vlan:
+ number: "104"
+ name: "LAX-VLAN104"
+ ip: "10.104.1.1"
+ mask: "255.255.255.0"

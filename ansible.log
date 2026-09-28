@@ -1728,3 +1728,65 @@ See the timeout setting options in the Network Debug and Troubleshooting Guide.
     "community.general.sudosu": "Run tasks using sudo su -",
     "containers.podman.podman_unshare": "Run tasks using podman unshare"
 }
+2026-09-25 19:56:47,419 p=60590 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 19:56:47,420 p=60590 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 19:56:47,652 p=60590 u=cproust n=ansible INFO| 1 plays in myplaybook.yml
+2026-09-25 19:56:47,654 p=60590 u=cproust n=ansible INFO| playbook: myplaybook.yml
+2026-09-25 19:56:48,834 p=60592 u=cproust n=ansible WARNING| [WARNING]: Collection at '/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible/_internal/ansible_collections/ansible/_protomatter' does not have a MANIFEST.json file, nor has it galaxy.yml: cannot detect version.
+
+2026-09-25 19:56:49,092 p=60592 u=cproust n=ansible INFO| {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "Profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}
+2026-09-25 19:57:08,958 p=60623 u=cproust n=ansible INFO| ansible-playbook [core 2.21.4]
+  config file = /home/cproust/Documents/ANSIBLE/ansible.cfg
+  configured module search path = ['/home/cproust/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible
+  ansible collection location = /home/cproust/.ansible/collections:/usr/share/ansible/collections:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/lib/python3/dist-packages:/home/cproust/Documents/ANSIBLE/.venv/local/lib/python3.13/dist-packages
+  executable location = /home/cproust/Documents/ANSIBLE/.venv/bin/ansible-playbook
+  python version = 3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0] (/home/cproust/Documents/ANSIBLE/.venv/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+2026-09-25 19:57:08,959 p=60623 u=cproust n=ansible INFO| Using /home/cproust/Documents/ANSIBLE/ansible.cfg as config file
+2026-09-25 19:57:09,186 p=60623 u=cproust n=ansible INFO| 1 plays in myplaybook.yml
+2026-09-25 19:57:09,188 p=60623 u=cproust n=ansible INFO| playbook: myplaybook.yml
+2026-09-25 19:57:10,399 p=60625 u=cproust n=ansible WARNING| [WARNING]: Collection at '/home/cproust/Documents/ANSIBLE/.venv/lib/python3.13/site-packages/ansible/_internal/ansible_collections/ansible/_protomatter' does not have a MANIFEST.json file, nor has it galaxy.yml: cannot detect version.
+
+2026-09-25 19:57:10,632 p=60625 u=cproust n=ansible INFO| {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "Profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.run0": "Systemd's run0",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}

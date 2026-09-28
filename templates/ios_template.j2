@@ -1,8 +1,14 @@
-vlan {{ vlan.get('number') }}
- name {{ vlan.get('name') }}
-exit
-interface Vlan{{ vlan.get('number') }}
+#jinja2: lstrip_blocks: True, trim_blocks: True
+#vlan {{ vlan.get('number') }}
+# name {{ vlan.get('name') }}
+#exit
+#interface Vlan{{ vlan.get('number') }}
+# no shutdown
+# description {{ vlan.get('name') }}
+# ip address {{ vlan.get('ip') }} {{ vlan.get('mask') }}
+#exit
+interface loopback{{ vlan.get('number') }}
  no shutdown
- description {{ vlan.get('name') }}
+ description {{ vlan.get('name') }}-LOOPBACK
  ip address {{ vlan.get('ip') }} {{ vlan.get('mask') }}
-exit
+ exit

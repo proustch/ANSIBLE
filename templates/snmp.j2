@@ -1,3 +1,4 @@
+#jinja2: lstrip_blocks: True, trim_blocks: True
 snmp-server community {{ snmp.get('RO') }} RO
 snmp-server community {{ snmp.get('RW') }} RW
 snmp-server contact  {{ snmp.get('contact') }}

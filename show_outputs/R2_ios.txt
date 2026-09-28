@@ -1,0 +1,13 @@
+#vlan 102
+# name LAX-VLAN102
+#exit
+#interface Vlan102
+# no shutdown
+# description LAX-VLAN102
+# ip address 10.102.1.1 255.255.255.0
+#exit
+interface loopback102
+ no shutdown
+ description LAX-VLAN102-LOOPBACK
+ ip address 10.102.1.1 255.255.255.0
+ exit

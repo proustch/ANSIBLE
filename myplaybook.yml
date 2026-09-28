@@ -103,25 +103,53 @@
 #    - name: "TASK22 VERIFYSNMP CONFIGURATION TO DEVICE"
 #      ansible.builtin.cli_command:
 #        command: "show run | include {{ snmp.get('RO') }}"
-     - name: "TASK23  CONFIGURATION OF VLAN INTERFACE TO  DEVICE"
-       ansible.builtin.template:
-        src: "templates/ios_template.j2"
-        dest: "show_outputs/{{ inventory_hostname }}_ios.txt"
-        mode: "0644"
-     - name: "TASK24  CONFIGURATION OF VLAN INTERFACE TO  DEVICE"
-       cisco.ios.ios_config:
-        diff_against: running
-        src: "show_outputs/{{ inventory_hostname }}_ios.txt"
-        backup: yes
-        save_when: modified
-#        diff_ignore_lines:
-#          - "! Last configuration change.*"
+    # - name: "TASK23  CONFIGURATION OF VLAN INTERFACE TO  DEVICE"
+    #   ansible.builtin.template:
+    #     src: "templates/ios_template.j2"
+    #     dest: "show_outputs/{{ inventory_hostname }}_ios.txt"
+    #     mode: "0644"
 
-     - name: "TASK25  VERIFY OF VLAN INTERFACE TO  DEVICE"
-       cisco.ios.ios_command:
-        commands:
-          - show ip interface brief 
-       register: output 
-     - name: "TASK26  DISPLAY OF VLAN INTERFACE TO  DEVICE"
-       ansible.builtin.debug:
-        msg: "{{ output.stdout_lines }}"
+    # - name: "TASK24  CONFIGURATION OF VLAN INTERFACE TO  DEVICE"
+    #   cisco.ios.ios_config:
+    #     diff_against: running
+    #     src: "show_outputs/{{ inventory_hostname }}_ios.txt"
+    #     backup: true
+    #     save_when: modified
+#       diff_ignore_lines:
+#          - "! Last configuration change.*"
+    # - name: "TASK25  VERIFY OF VLAN INTERFACE TO  DEVICE"
+    #   cisco.ios.ios_command:
+    #     commands:
+    #       - show ip interface brief
+    #   register: output
+
+    # - name: "TASK26  DISPLAY OF VLAN INTERFACE TO  DEVICE"
+    #   ansible.builtin.debug:
+    #     msg: "{{ output.stdout_lines }}"
+    # - name: "TASK27  DISPLAY OF OSPF CONFIGURATION TO  DEVICE"
+    #   cisco.ios.ios_ospfv2:
+    #     config:
+    #     state: gathered
+    #   register: ospf_output
+    # - name: "TASK28  DISPLAY OF OSPF CONFIGURATION TO  DEVICE"
+    #   ansible.builtin.copy:
+    #     content: "{{ {'ospfv2': ospf_output['gathered'] } | to_nice_yaml }}"
+    #     dest: "show_outputs/{{ inventory_hostname }}_ospf.txt"
+    #     mode: "0644"
+    # - name: "TASK29  SAVE CONFIGURATION TO  DEVICE"
+    #   cisco.ios.ios_config:
+    #     save_when: always
+    - name: "TASK30  GATHER CONFIGURATION TO  DEVICE"
+      cisco.ios.ios_facts:
+        gather_subset:
+          - "all"
+      register: config_output
+    - name: "TASK31  DEBUG  CONFIGURATION TO  DEVICE"
+      ansible.builtin.debug:
+        msg: "{{ config_output }}"
+    - name: "TASK32  ASSERT CONFIGURATION TO  DEVICE"
+      ansible.builtin.assert:
+        that: config_output.ansible_facts.ansible_net_system == "ios"
+    - name: "TASK33  DEBUG  CONFIGURATION TO  DEVICE"
+      ansible.builtin.debug:
+        msg: "{{ config_output.ansible_facts.ansible_net_system  }}"
